@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<style>
-h3,h1{color:white}
-body{
-background-color:blue}
-h2{color:white}
-button{margin-top:10px;height:30px;color:gray;display:block}
-input{height:40px;}
+{% extends 'base.html' %}
 
-</style>
+{% block head %}
+<title>Salary Prediction</title>
+{% endblock %}
 
+{% block body %}
 
-  
-</head>
-
-<body>
  <div class="login">
 	<h1>Salary Manager App</h1>
 	<hr>
@@ -42,9 +25,8 @@ input{height:40px;}
    <br>
    <br>
    <h3>{{ prediction_text }}</h3>
-
+     
  </div>
 
 
-</body>
-</html>
+{% endblock %}

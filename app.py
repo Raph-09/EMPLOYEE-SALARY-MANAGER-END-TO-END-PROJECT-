@@ -1,24 +1,38 @@
 import numpy as np
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
 from flask import Flask, request, jsonify, render_template
 import pickle
+from preproces import prepro
+
+
+
+
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
-
+model = pickle.load(open('salary_model_2.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    #this is branch1
-    int_features = [int(x) for x in request.form.values()]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+    if request.method == 'POST':
+        experience = int(request.form['experience'])
 
-    output = round(prediction[0], 2)
+        test_score = int(request.form['test_score'])
 
-    return render_template('index.html', prediction_text="The employee's salary should be:$ {}".format(output))
+        Interview_Score = int(request.form['interview_score'])
+
+        scaled_x = prepro([[experience, test_score, Interview_Score]])
+        prediction = model.predict(scaled_x)
+        output = round(prediction[0], 0)
+        if output < 0:
+            return render_template('predit.html', prediction_texts="You cannot have a negative salary")
+        else:
+            return render_template('index.html', prediction_text="The employee's salary should be:$ {}".format(output))
+    else:
+        return render_template('index.html')
 
 
 if __name__ == "__main__":
