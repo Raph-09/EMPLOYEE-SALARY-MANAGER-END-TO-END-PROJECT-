@@ -19,7 +19,9 @@ The following steps where followed;
 5) Lasso regression Model 
 # Performance metric
 MAE is 1739.82
+
 MSE is 4167482.00
+
 RMSE is 2041.44
 
     
