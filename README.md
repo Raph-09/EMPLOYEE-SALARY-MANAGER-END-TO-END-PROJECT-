@@ -16,7 +16,7 @@ The project aims to lessen the burden of Head of Recruitment(HR) by making it ea
 This project is an end to end project where I explored the data, engineered the features, test models and deployed the best model into the Flask app.
 The following steps where followed;
 1) Feature Engineering: missing values where handled
-2) Exporatory data analysis:I explored the data for insight
+2) Exporatory data analysis:Explored the data for insight
 4) Feature Scaling: standard scaler was used
 5) Lasso regression Model 
 # Performance metric
