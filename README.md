@@ -18,7 +18,11 @@ The following steps where followed;
 1) Feature Engineering: missing values where handled
 2) Exporatory data analysis:Explored the data for insight
 4) Feature Scaling: standard scaler was used
-5) Lasso regression Model 
+5) Use machine learning pipeline to test three models
+6) Perform hyperperameter tuning and select the best model
+7) Create and save a pickle file using the best model
+8) Use the pickle file to build a flask app and deploy on heroku
+
 # Performance metric
 MAE is 1739.82
 
