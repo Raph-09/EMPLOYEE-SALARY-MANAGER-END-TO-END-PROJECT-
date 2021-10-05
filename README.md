@@ -34,7 +34,7 @@ RMSE is 2041.44
     
     
  # Run Locally
-  Run this commandon ur command line:https://github.com/Raph-09/Employee-Salary-Manager-Project.git
+  Run this command using ur command line:https://github.com/Raph-09/Employee-Salary-Manager-Project.git
   
   Install the packages that are found in requirement.txt file
   
